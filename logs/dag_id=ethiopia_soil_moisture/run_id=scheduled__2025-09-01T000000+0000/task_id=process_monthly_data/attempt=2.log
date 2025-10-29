@@ -1,0 +1,25 @@
+[2025-10-20T07:15:44.545+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [queued]>
+[2025-10-20T07:15:44.554+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [queued]>
+[2025-10-20T07:15:44.555+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T07:15:44.555+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2025-10-20T07:15:44.556+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T07:15:44.570+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): process_monthly_data> on 2025-09-01 00:00:00+00:00
+[2025-10-20T07:15:44.580+0000] {standard_task_runner.py:55} INFO - Started process 452 to run task
+[2025-10-20T07:15:44.584+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ethiopia_soil_moisture', 'process_monthly_data', 'scheduled__2025-09-01T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/ethiopia_dag.py', '--cfg-path', '/tmp/tmpxkqq9047']
+[2025-10-20T07:15:44.589+0000] {standard_task_runner.py:83} INFO - Job 9: Subtask process_monthly_data
+[2025-10-20T07:15:44.690+0000] {task_command.py:376} INFO - Running <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [running]> on host 8c6f47b63e00
+[2025-10-20T07:15:44.767+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ethiopia_project
+AIRFLOW_CTX_DAG_ID=ethiopia_soil_moisture
+AIRFLOW_CTX_TASK_ID=process_monthly_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-09-01T00:00:00+00:00
+[2025-10-20T07:15:47.809+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm2025_09.nc
+[2025-10-20T07:15:49.105+0000] {logging_mixin.py:120} INFO - Clipped: ethiopia_sm2025_09.nc
+[2025-10-20T07:15:49.106+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-10-20T07:15:49.122+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=ethiopia_soil_moisture, task_id=process_monthly_data, execution_date=20250901T000000, start_date=20251020T071544, end_date=20251020T071549
+[2025-10-20T07:15:49.184+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2025-10-20T07:15:49.208+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

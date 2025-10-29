@@ -1,0 +1,57 @@
+[2025-10-20T07:10:33.328+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [queued]>
+[2025-10-20T07:10:33.338+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [queued]>
+[2025-10-20T07:10:33.338+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T07:10:33.339+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2025-10-20T07:10:33.339+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T07:10:33.355+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): process_monthly_data> on 2025-09-01 00:00:00+00:00
+[2025-10-20T07:10:33.369+0000] {standard_task_runner.py:55} INFO - Started process 206 to run task
+[2025-10-20T07:10:33.374+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ethiopia_soil_moisture', 'process_monthly_data', 'scheduled__2025-09-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/ethiopia_dag.py', '--cfg-path', '/tmp/tmpe8bpt5r2']
+[2025-10-20T07:10:33.379+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask process_monthly_data
+[2025-10-20T07:10:33.529+0000] {task_command.py:376} INFO - Running <TaskInstance: ethiopia_soil_moisture.process_monthly_data scheduled__2025-09-01T00:00:00+00:00 [running]> on host 8c6f47b63e00
+[2025-10-20T07:10:33.632+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ethiopia_project
+AIRFLOW_CTX_DAG_ID=ethiopia_soil_moisture
+AIRFLOW_CTX_TASK_ID=process_monthly_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-09-01T00:00:00+00:00
+[2025-10-20T07:10:39.462+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm2025_09.nc
+[2025-10-20T07:10:42.656+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/backends/api.py", line 86, in _get_default_engine_netcdf
+    import netCDF4  # noqa: F401
+ModuleNotFoundError: No module named 'netCDF4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/backends/api.py", line 91, in _get_default_engine_netcdf
+    import scipy.io.netcdf  # noqa: F401
+ModuleNotFoundError: No module named 'scipy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ethiopia_dag.py", line 45, in process_monthly_data
+    clip_ethiopia(temp_file, output_file)
+  File "/opt/airflow/dags/ethiopia_dag.py", line 26, in clip_ethiopia
+    ds_ethiopia.to_netcdf(output_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/core/dataset.py", line 1912, in to_netcdf
+    invalid_netcdf=invalid_netcdf,
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/backends/api.py", line 1018, in to_netcdf
+    engine = _get_default_engine(path_or_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/backends/api.py", line 108, in _get_default_engine
+    return _get_default_engine_netcdf()
+  File "/home/airflow/.local/lib/python3.7/site-packages/xarray/backends/api.py", line 96, in _get_default_engine_netcdf
+    "cannot read or write netCDF files without "
+ValueError: cannot read or write netCDF files without netCDF4-python or scipy installed
+[2025-10-20T07:10:42.671+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=ethiopia_soil_moisture, task_id=process_monthly_data, execution_date=20250901T000000, start_date=20251020T071033, end_date=20251020T071042
+[2025-10-20T07:10:42.685+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 7 for task process_monthly_data (cannot read or write netCDF files without netCDF4-python or scipy installed; 206)
+[2025-10-20T07:10:42.716+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2025-10-20T07:10:42.734+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

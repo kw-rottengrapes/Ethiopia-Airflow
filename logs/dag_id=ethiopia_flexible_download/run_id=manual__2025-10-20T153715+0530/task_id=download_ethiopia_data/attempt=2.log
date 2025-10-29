@@ -1,0 +1,27 @@
+[2025-10-20T10:09:29.579+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-20T15:37:15+05:30 [queued]>
+[2025-10-20T10:09:29.588+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-20T15:37:15+05:30 [queued]>
+[2025-10-20T10:09:29.589+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T10:09:29.589+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2025-10-20T10:09:29.590+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-20T10:09:29.604+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): download_ethiopia_data> on 2025-10-20 10:07:15+00:00
+[2025-10-20T10:09:29.612+0000] {standard_task_runner.py:55} INFO - Started process 972 to run task
+[2025-10-20T10:09:29.617+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ethiopia_flexible_download', 'download_ethiopia_data', 'manual__2025-10-20T15:37:15+05:30', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/ethiopia_flexible_download.py', '--cfg-path', '/tmp/tmpw9pxst7t']
+[2025-10-20T10:09:29.621+0000] {standard_task_runner.py:83} INFO - Job 25: Subtask download_ethiopia_data
+[2025-10-20T10:09:29.705+0000] {task_command.py:376} INFO - Running <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-20T15:37:15+05:30 [running]> on host da48842a6a56
+[2025-10-20T10:09:29.781+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ethiopia_project
+AIRFLOW_CTX_DAG_ID=ethiopia_flexible_download
+AIRFLOW_CTX_TASK_ID=download_ethiopia_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-20T10:07:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-20T15:37:15+05:30
+[2025-10-20T10:09:29.785+0000] {logging_mixin.py:120} INFO - Processing 200-09
+[2025-10-20T10:09:30.221+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm200_09.nc
+[2025-10-20T10:09:30.245+0000] {logging_mixin.py:120} INFO - ❌ Failed 200-09: Unable to open file (file signature not found)
+[2025-10-20T10:09:30.246+0000] {logging_mixin.py:120} INFO - Ethiopia TIFF data saved in folder: ethiopia_flexible_download
+[2025-10-20T10:09:30.246+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-10-20T10:09:30.258+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=ethiopia_flexible_download, task_id=download_ethiopia_data, execution_date=20251020T100715, start_date=20251020T100929, end_date=20251020T100930
+[2025-10-20T10:09:30.311+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2025-10-20T10:09:30.331+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

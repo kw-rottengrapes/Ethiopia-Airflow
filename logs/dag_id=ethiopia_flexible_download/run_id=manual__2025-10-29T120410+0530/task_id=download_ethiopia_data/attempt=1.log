@@ -1,0 +1,61 @@
+[2025-10-29T06:34:21.965+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-29T12:04:10+05:30 [queued]>
+[2025-10-29T06:34:21.973+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-29T12:04:10+05:30 [queued]>
+[2025-10-29T06:34:21.974+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-29T06:34:21.975+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2025-10-29T06:34:21.975+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-29T06:34:21.991+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): download_ethiopia_data> on 2025-10-29 06:34:10+00:00
+[2025-10-29T06:34:22.000+0000] {standard_task_runner.py:55} INFO - Started process 174 to run task
+[2025-10-29T06:34:22.005+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ethiopia_flexible_download', 'download_ethiopia_data', 'manual__2025-10-29T12:04:10+05:30', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/ethiopia_flexible_download.py', '--cfg-path', '/tmp/tmpach3aitt']
+[2025-10-29T06:34:22.007+0000] {standard_task_runner.py:83} INFO - Job 57: Subtask download_ethiopia_data
+[2025-10-29T06:34:22.118+0000] {task_command.py:376} INFO - Running <TaskInstance: ethiopia_flexible_download.download_ethiopia_data manual__2025-10-29T12:04:10+05:30 [running]> on host c3b853c365e8
+[2025-10-29T06:34:22.221+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ethiopia_project
+AIRFLOW_CTX_DAG_ID=ethiopia_flexible_download
+AIRFLOW_CTX_TASK_ID=download_ethiopia_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-29T06:34:10+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-29T12:04:10+05:30
+[2025-10-29T06:34:22.224+0000] {logging_mixin.py:120} INFO - Processing all months for 1990
+[2025-10-29T06:34:25.502+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_01.nc
+[2025-10-29T06:34:26.998+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_01.tiff
+[2025-10-29T06:34:27.000+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-01
+[2025-10-29T06:34:31.827+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_02.nc
+[2025-10-29T06:34:31.953+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_02.tiff
+[2025-10-29T06:34:31.955+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-02
+[2025-10-29T06:34:36.635+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_03.nc
+[2025-10-29T06:34:36.837+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_03.tiff
+[2025-10-29T06:34:36.839+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-03
+[2025-10-29T06:34:40.911+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_04.nc
+[2025-10-29T06:34:41.048+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_04.tiff
+[2025-10-29T06:34:41.050+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-04
+[2025-10-29T06:34:43.889+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_05.nc
+[2025-10-29T06:34:44.014+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_05.tiff
+[2025-10-29T06:34:44.015+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-05
+[2025-10-29T06:34:46.901+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_06.nc
+[2025-10-29T06:34:47.016+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_06.tiff
+[2025-10-29T06:34:47.017+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-06
+[2025-10-29T06:34:50.280+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_07.nc
+[2025-10-29T06:34:50.406+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_07.tiff
+[2025-10-29T06:34:50.410+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-07
+[2025-10-29T06:34:54.700+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_08.nc
+[2025-10-29T06:34:54.827+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_08.tiff
+[2025-10-29T06:34:54.829+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-08
+[2025-10-29T06:34:57.796+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_09.nc
+[2025-10-29T06:34:57.906+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_09.tiff
+[2025-10-29T06:34:57.907+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-09
+[2025-10-29T06:35:01.721+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_10.nc
+[2025-10-29T06:35:01.879+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_10.tiff
+[2025-10-29T06:35:01.880+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-10
+[2025-10-29T06:35:04.893+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_11.nc
+[2025-10-29T06:35:05.073+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_11.tiff
+[2025-10-29T06:35:05.074+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-11
+[2025-10-29T06:35:09.581+0000] {logging_mixin.py:120} INFO - Downloaded: temp_sm1990_12.nc
+[2025-10-29T06:35:09.697+0000] {logging_mixin.py:120} INFO - Clipped to TIFF: ethiopia_sm1990_12.tiff
+[2025-10-29T06:35:09.698+0000] {logging_mixin.py:120} INFO - ✅ Completed: 1990-12
+[2025-10-29T06:35:09.699+0000] {logging_mixin.py:120} INFO - Ethiopia TIFF data saved in folder: ethiopia_flexible_download
+[2025-10-29T06:35:09.699+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-10-29T06:35:09.712+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=ethiopia_flexible_download, task_id=download_ethiopia_data, execution_date=20251029T063410, start_date=20251029T063421, end_date=20251029T063509
+[2025-10-29T06:35:09.759+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2025-10-29T06:35:09.779+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
